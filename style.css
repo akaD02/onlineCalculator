@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: rgb(172, 159, 159);
 }
 
 
@@ -13,64 +14,79 @@ body {
 
 #main-container {
     display: flex;
-    width: 390px;
-    height: 500px;
+    flex-flow: column nowrap;
     border: 1px solid black;
-    border-radius: 15px;
-    padding: 20px;
-    flex-flow: column wrap;
-    align-items: center;
-    gap: 10px;
-}
-
-#display {
-    height: 70px;
-    border: 1px solid black;
-    width: 390px;
-}
-
-#buttons {
-    border: 1px solid black;
+    width: 400px;
+    height: 550px;
+    box-sizing: border-box;
     padding: 15px;
-    flex: 1;
-    flex-direction: column;
-}
-
-.others {
-    border-bottom: none;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 6px;
-}
-
-.others > button {
-    height: 70px;
-    width: 85px;
-}
-
-.button.equal {
-    width: 176px;
-    height: 70px;
-}
-
-.button button {
-    width: 85px;
-    height: 70px;
-}
-
-.button {
-    display: flex;
-    gap: 6px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
+    background-color: orange;
 }
 
-button {
-    font-size: 20px;
-    background-color: #ddd;
+#main-container {
+    border-radius: 15px;
+}
+
+#display, #buttons {
     border-radius: 5px;
 }
 
+#display {
+    width: 366px;
+    height: 90px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+}
 
+#buttons {
+    width: 370px;
+    flex: 1;
+    gap: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: grey;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#buttons > button {
+    width: 83px;
+    height: 70px;
+    flex-shrink: 1;
+    border-radius: 5px;
+}
+
+.operation, .result {
+    width: 368px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.operation {
+    height: 65px;
+    font-size: 22px;
+    border-bottom: 1px solid black;
+}
+
+button {
+    background-color: #ddd;
+    font-size: 22px;
+}
+
+.result {
+    font-size: 18px;
+    height: 50px;
+}
